@@ -25,8 +25,6 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     boolean running;
     Button b_end;
 
-    int score = 0;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,15 +34,9 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         stepDistance =findViewById(R.id.step_distance);
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         sensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
-
-
         sensorManager.registerListener(this, sensor, SensorManager.SENSOR_DELAY_UI);
 
-
-
         b_end = (Button) findViewById(R.id.b_end);
-
-
 
         b_end.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -117,7 +109,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     }
 
     public float distanceCalc(int steppieCount){
-        float distance = (float)(steppieCount*78)/(float)10000;
+        float distance = (float)(steppieCount*78)/(float)100000;
         return distance;
         }
 
