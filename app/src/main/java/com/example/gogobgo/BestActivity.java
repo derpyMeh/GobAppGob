@@ -11,7 +11,7 @@ public class BestActivity extends AppCompatActivity {
 
     TextView tv_score,winStar;
 
-    int lastScore,starScore;
+    int lastScore;
     int starsWon;
     int best1, best2, best3;
 
