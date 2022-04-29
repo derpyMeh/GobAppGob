@@ -30,7 +30,7 @@ public class BestActivity extends AppCompatActivity {
         best1 = preferences.getInt("best1", 0);
         best2 = preferences.getInt("best2", 0);
         best3 = preferences.getInt("best3", 0);
-        starScore = preferences.getInt("starScore",0);
+        starsWon = preferences.getInt("starsWon",0);
 
         //Replaces highscore beats
         if(lastScore > best3){

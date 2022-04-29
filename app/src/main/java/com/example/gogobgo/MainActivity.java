@@ -73,9 +73,9 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                 if(MagnitudeDelta > 6){
                     steppieCount++;
                 }
-                tv_score.setText(String.valueOf(steppieCount));
+                tv_score.setText(String.valueOf("Steps Taken: "+steppieCount));
             }
-           stepDistance.setText(String.valueOf(distanceCalc(steppieCount)));
+           stepDistance.setText(String.valueOf("Distance Traveled: " + distanceCalc(steppieCount)+" km"));
         }
 
     }
